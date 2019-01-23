@@ -44,4 +44,10 @@ public class WhiskyTrackerApplicationTests {
 		assertEquals(1, whiskyRepository.findWhiskyByRegion("Speyside").size());
 	}
 
+	@Test
+	public void findDistilleriesByAge(){
+		assertEquals(2, distilleryRepository.findDistilleriesByWhiskyAge(12).size());
+		assertEquals(1, distilleryRepository.findDistilleriesByWhiskyAge(25).size());
+	}
+
 }
